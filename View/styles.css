@@ -1,0 +1,179 @@
+/* -------- POLICE DE TEXTE -------- */
+/* -------- POLICE DE TEXTE -------- */
+
+@font-face {
+  font-family: "Raleway";
+  src: url("./Raleway/static/Raleway-SemiBold.ttf") format("truetype");
+}
+
+* {
+  font-family: "Raleway";
+}
+
+/* -------- STYLES POUR LA NAVBAR ------- */
+/* -------- STYLES POUR LA NAVBAR ------- */
+
+#navbarContainer {
+  display: flex;
+}
+
+.navbarHoverContainer {
+  display: flex;
+
+  width: auto;
+  height: auto;
+  background-color: #0065fc; /* ici il suffit lors d'un hover de switch entre 95% et 100% pour faire apparaitre la barre bleu au dessus */
+
+  justify-content: center;
+}
+.navbarHoverContainer:nth-child(2) {
+  margin-left: auto;
+}
+
+.navContainerItems {
+  text-decoration: none;
+  text-emphasis: none;
+  color: black;
+  background-color: white;
+  height: 100%; /* ici il suffit lors d'un hover de switch entre 95% et 100% pour faire apparaitre la barre bleu au dessus */
+  padding: 0 15px 0 15px;
+  margin-top: auto;
+}
+
+.navContainerItems:hover {
+  height: 95%; /* ici il suffit lors d'un hover de switch entre 95% et 100% pour faire apparaitre la barre bleu au dessus */
+  color: #0065fc;
+}
+
+.Inscrire {
+  font-weight: bold;
+  color: #0065fc;
+}
+
+/* -------- STYLES POUR LE BODY ------- */
+/* -------- STYLES POUR LE BODY ------- */
+
+h2 {
+  font-size: 20px;
+  font-weight: bold;
+}
+
+p {
+  font-size: 10px;
+  font-weight: normal;
+}
+
+/* ------ Formulaire ------*/
+/* ------ Formulaire ------*/
+* {
+  box-sizing: border-box;
+}
+
+.Form-container {
+  width: 350px;
+  text-align: center;
+}
+
+.localisationIcone {
+  background-color: grey;
+  padding: 8px;
+  min-width: 25px;
+}
+
+.button {
+  padding: 6px;
+  background: #0065fc;
+  color: white;
+  font-size: 17px;
+  border: none;
+}
+
+.inputField {
+  padding: 6px;
+  font-size: 17px;
+  border: solid;
+  border-width: 1px;
+  width: 50%; /* adjust as needed (as long as it doesn't break the topnav) */
+}
+
+.button:hover {
+  background: #ccc;
+  width: 50%;
+}
+
+/* ------ Boutons FILTRE ------*/
+/* ------ Boutons FILTRE ------*/
+
+.Filtre {
+  display: flex;
+  flex-direction: row;
+}
+
+.Filtre h3 {
+  display: inline-block;
+  margin-top: auto;
+  margin-bottom: auto;
+}
+
+.buttonFiltre {
+  height: 40px;
+  background-color: white;
+
+  border: none; /* Remove borders */
+  color: black;
+  padding: 12px 16px; /* Some padding */
+  font-size: 16px; /* Set a font size */
+  border-radius: 40px;
+  border: solid;
+  border-color: lightgrey;
+}
+
+.iconeFiltre {
+  background-color: #deebff;
+  color: #0065fc;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+}
+
+/* ------ 1er contenu ------*/
+/* ------ 1er contenu ------*/
+
+h3 {
+  font-size: 15px;
+  font-weight: bold;
+}
+
+#Hebergement {
+  display: flex;
+  flex-wrap: wrap;
+
+  width: 70vw;
+  background-color: #f2f2f2;
+  border-radius: 20px;
+}
+
+#Hebergement h2 {
+  display: inline-block;
+  background-color: lightskyblue;
+  width: 100%;
+  margin: 15px;
+}
+
+.containerSection {
+  background-color: lightsalmon;
+  border-radius: 20px;
+
+  border: solid;
+  width: 30%;
+  margin: 15px;
+}
+
+.containerSection img {
+  display: block;
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
+
+  width: 100%;
+  height: 60%;
+}
