@@ -15,6 +15,8 @@
 
 #navbarContainer {
   display: flex;
+  margin-left: 3vw;
+  margin-bottom: 30px;
 }
 
 .navbarHoverContainer {
@@ -52,6 +54,9 @@
 
 /* -------- STYLES POUR LE BODY ------- */
 /* -------- STYLES POUR LE BODY ------- */
+#decalage {
+  margin-left: 3vw;
+}
 
 h2 {
   font-size: 20px;
@@ -70,35 +75,43 @@ p {
 }
 
 .Form-container {
-  width: 350px;
-  text-align: center;
+  display: flex;
+  margin-bottom: 25px;
 }
 
 .localisationIcone {
-  background-color: grey;
-  padding: 8px;
-  min-width: 25px;
+  display: block;
+  margin-top: auto; /*Me permet de bien centrer l'icone dans le container parent*/
+  margin-bottom: auto; /*Me permet de bien centrer l'icone dans le container parent*/
+  background-color: #f2f2f2;
+  padding: 10px; /*Me permet d'éloigner l'icone des bords*/
+  width: 33px;
+  height: 36px;
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
 }
 
 .button {
-  padding: 6px;
+  /*J'ai ess*/
+
+  padding: 8px; /*Me permet d'éloigner le texte des bords*/
   background: #0065fc;
   color: white;
   font-size: 17px;
   border: none;
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
 }
 
 .inputField {
   padding: 6px;
   font-size: 17px;
-  border: solid;
-  border-width: 1px;
-  width: 50%; /* adjust as needed (as long as it doesn't break the topnav) */
+  border: 1px solid #f2f2f2;
+  width: 200px; /* adjust as needed (as long as it doesn't break the topnav) */
 }
 
 .button:hover {
   background: #ccc;
-  width: 50%;
 }
 
 /* ------ Boutons FILTRE ------*/
@@ -110,7 +123,6 @@ p {
 }
 
 .Filtre h3 {
-  display: inline-block;
   margin-top: auto;
   margin-bottom: auto;
 }
@@ -121,7 +133,7 @@ p {
 
   border: none; /* Remove borders */
   color: black;
-  padding: 12px 16px; /* Some padding */
+  padding-top: 7px; /* me permet de manière approximative de centrer le texte*/
   font-size: 16px; /* Set a font size */
   border-radius: 40px;
   border: solid;
@@ -129,6 +141,7 @@ p {
 }
 
 .iconeFiltre {
+  display: inline-block;
   background-color: #deebff;
   color: #0065fc;
   width: 40px;
@@ -136,28 +149,38 @@ p {
   border-radius: 50%;
 }
 
-/* ------ 1er contenu ------*/
-/* ------ 1er contenu ------*/
+/* ------ 1er contenu HEBERGEMENTS------*/
+/* ------ 1er contenu HEBERGEMENTS------*/
 
 h3 {
   font-size: 15px;
   font-weight: bold;
 }
 
-#Hebergement {
+.subMainContainer {
   display: flex;
   flex-wrap: wrap;
+  width: 65vw;
 
-  width: 70vw;
+  margin: 15px; /* ATTENTON je dois en mettre plus très probablement*/
   background-color: #f2f2f2;
   border-radius: 20px;
 }
 
-#Hebergement h2 {
+.subMainContainer h2 {
+  /*permet d'avoir le h2 qui prend toute une ligne*/
   display: inline-block;
   background-color: lightskyblue;
   width: 100%;
-  margin: 15px;
+  padding: 10px;
+}
+
+/* Pour que le text ne colle pas le bord gauche de l'article*/
+.subMainContainer h3 {
+  padding-left: 10px;
+}
+.subMainContainer p {
+  padding-left: 10px;
 }
 
 .containerSection {
@@ -166,14 +189,60 @@ h3 {
 
   border: solid;
   width: 30%;
-  margin: 15px;
+  margin: 10px;
 }
 
 .containerSection img {
-  display: block;
-  border-top-left-radius: 15px;
-  border-top-right-radius: 15px;
+  display: block; /*Sinon l'image ne tolère pas les effets borders et de dimensions... */
+  border-top-left-radius: 20px; /*creer les courbures sur l'image*/
+  border-top-right-radius: 20px;
+
+  padding: 4px; /*laisser de l'espace entre l'image et le bord*/
 
   width: 100%;
   height: 60%;
+}
+
+/* ------ 2ème contenu MEILLEURS------*/
+/* ------ 2ème contenu MEILLEURS------*/
+
+/*Putain... autant faire la media query tout de suite...*/
+
+#mainContainer {
+  display: flex;
+}
+
+.populaires {
+  width: 35vw;
+}
+
+/* ------ FOOTER ------ */
+/* ------ FOOTER ------ */
+
+footer {
+  display: flex;
+  width: 100vw;
+  background-color: #f2f2f2;
+  padding-top: 25px;
+  padding-bottom: 25px;
+}
+
+.containerFooter {
+  display: flex;
+  flex-direction: column;
+  margin-right: auto;
+  /* à voir s'il manque encore une marge sur le côté gauche du 1er element*/
+}
+
+.containerFooter a {
+  display: inline-block;
+
+  font-weight: normal;
+  text-decoration: none;
+  text-emphasis: none;
+  color: black;
+  font-size: 15px;
+  font-weight: lighter;
+
+  padding-top: 8px;
 }
