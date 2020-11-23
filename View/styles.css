@@ -19,11 +19,15 @@
   margin-bottom: 30px;
 }
 
+#navbarContainer img {
+  padding-top: 25px;
+}
+
 .navbarHoverContainer {
   display: flex;
 
   width: auto;
-  height: auto;
+  height: 45px;
   background-color: #0065fc; /* ici il suffit lors d'un hover de switch entre 95% et 100% pour faire apparaitre la barre bleu au dessus */
 
   justify-content: center;
@@ -38,7 +42,7 @@
   color: black;
   background-color: white;
   height: 100%; /* ici il suffit lors d'un hover de switch entre 95% et 100% pour faire apparaitre la barre bleu au dessus */
-  padding: 0 15px 0 15px;
+  padding: 35px 15px 0 15px;
   margin-top: auto;
 }
 
