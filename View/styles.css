@@ -164,7 +164,7 @@ h3 {
 .subMainContainer {
   display: flex;
   flex-wrap: wrap;
-  width: 65vw;
+  width: 70%; /*Pour que cette section ne prenne  que 2/3 de la largeur de l'écran*/
 
   margin: 15px; /* ATTENTON je dois en mettre plus très probablement*/
   background-color: #f2f2f2;
@@ -210,14 +210,41 @@ h3 {
 /* ------ 2ème contenu MEILLEURS------*/
 /* ------ 2ème contenu MEILLEURS------*/
 
-/*Putain... autant faire la media query tout de suite...*/
-
 #mainContainer {
   display: flex;
+  width: 90vw;
 }
 
-.populaires {
-  width: 35vw;
+.subMainContainerPopulaires {
+  display: flex;
+  flex-direction: column;
+  width: 20%;
+
+  background-color: lightgreen;
+}
+.subMainContainerPopulaires h2 {
+  width: 100%; /* non nécessaire en théorie */
+
+  background-color: lightcoral;
+}
+
+.subMainContainerPopulaires img {
+  display: block;
+
+  width: 30%;
+  height: 100%;
+
+  background-color: lightcoral;
+}
+
+.subPopulaires {
+  width: 100%;
+
+  /*
+  A refaire pour que l'image soit à gauche 
+  display flex
+  flex-direction : row;
+  */
 }
 
 /* ------ FOOTER ------ */
@@ -248,5 +275,5 @@ footer {
   font-size: 15px;
   font-weight: lighter;
 
-  padding-top: 8px;
+  padding-top: 15px;
 }
