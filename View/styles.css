@@ -180,6 +180,7 @@ h3 {
 }
 
 /* Pour que le text ne colle pas le bord gauche de l'article*/
+/* OPTIMISATION faire une classe pour le contenu 1, 2 et 3*/
 .subMainContainer h3 {
   padding-left: 10px;
 }
@@ -211,40 +212,58 @@ h3 {
 /* ------ 2ème contenu MEILLEURS------*/
 
 #mainContainer {
+  /* Le container qui contient les deux contenu est en flex*/
   display: flex;
   width: 90vw;
 }
 
 .subMainContainerPopulaires {
-  display: flex;
+  display: flex; /*permet d'avoir le contenu en dessous l'un de l'autre*/
   flex-direction: column;
-  width: 20%;
+  width: 20%; /*le 1er contenu (hébergement Marseilles) prend 70% de l'espace, celui-ci 20%*/
 
-  background-color: lightgreen;
+  margin: 15px; /* à faire concorder avec le 1er contenu!*/
+  background-color: #f2f2f2;
+  border-radius: 20px;
 }
 .subMainContainerPopulaires h2 {
-  width: 100%; /* non nécessaire en théorie */
-
-  background-color: lightcoral;
-}
-
-.subMainContainerPopulaires img {
-  display: block;
-
-  width: 30%;
-  height: 100%;
-
-  background-color: lightcoral;
-}
-
-.subPopulaires {
+  /*display est nécessaire pour que le titre du premier contenu s'aligne avec ce dernier*/
+  display: inline-block;
   width: 100%;
+  padding: 10px;
+  background-color: lightcoral;
+}
 
+/* Ci-dessous le CSS pour les articles à l'inerieur des sections*/
+.containerSectionsubPopulaires {
+  width: 100%;
+  height: 33%;
+
+  display: flex;
+  flex-direction: row; /*A SUPPROMER : est fait en standard, donc peut être supprimé*/
+
+  background-color: lightsalmon; /*a synchorniser avec les 1,2,3 contenus : classes communes*/
+  border-radius: 20px; /*a synchorniser avec les 1,2,3 contenus : classes communes*/
+
+  border: solid;
+  width: 100%;
+  margin: 10px;
   /*
   A refaire pour que l'image soit à gauche 
+  + supprimer la class commune...
   display flex
   flex-direction : row;
   */
+}
+
+.containerSectionsubPopulaires img {
+  display: block; /*Sinon l'image ne tolère pas les effets borders et de dimensions... */
+
+  width: 40%;
+  height: 100%;
+}
+.sousSousSection {
+  background-color: lightseagreen;
 }
 
 /* ------ FOOTER ------ */
