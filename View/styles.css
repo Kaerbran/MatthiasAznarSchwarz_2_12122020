@@ -1,13 +1,12 @@
 /* -------- POLICE DE TEXTE -------- */
 /* -------- POLICE DE TEXTE -------- */
 
-@font-face {
-  font-family: "Raleway";
-  src: url("./Raleway/static/Raleway-SemiBold.ttf") format("truetype");
+* {
+  font-family: "Raleway", sans-serif;
 }
 
-* {
-  font-family: "Raleway";
+body {
+  margin: 0px; /*en automatique, safari va mettre un margin... */
 }
 
 /* -------- STYLES POUR LA NAVBAR ------- */
@@ -105,6 +104,7 @@ p {
   border: none;
   border-top-right-radius: 10px;
   border-bottom-right-radius: 10px;
+  margin-left: -1px; /* permet de coller le bouton au formulaire*/
 }
 
 .inputField {
@@ -121,6 +121,32 @@ p {
 /* ------ Boutons FILTRE ------*/
 /* ------ Boutons FILTRE ------*/
 
+.contenantBouton {
+  /* Va nous permettre de mieux */
+  display: flex;
+  margin: 3px;
+  justify-content: center;
+  text-align: center;
+  height: 40px;
+  background-color: white;
+
+  border: none; /* Remove borders */
+  color: black;
+  font-size: 16px; /* Set a font size */
+  border-radius: 40px;
+  border: solid;
+  border-width: 2px;
+  border-color: lightgrey;
+}
+
+.contenantBouton span {
+  display: block;
+  padding-left: 10px;
+  padding-right: 10px;
+  margin-top: auto;
+  margin-bottom: auto;
+}
+
 .Filtre {
   display: flex;
   flex-direction: row;
@@ -131,6 +157,7 @@ p {
   margin-bottom: auto;
 }
 
+/*NE SERT A RIEN*/
 .buttonFiltre {
   height: 40px;
   background-color: white;
@@ -144,13 +171,24 @@ p {
   border-color: lightgrey;
 }
 
+/*NE SERT A RIEN*/
 .iconeFiltre {
   display: inline-block;
   background-color: #deebff;
   color: #0065fc;
   width: 40px;
+  border-radius: 50%;
+}
+
+.divIconFilter {
+  display: flex;
+  align-items: center;
+  background-color: #deebff;
+  color: #0065fc;
+  width: 40px;
   height: 40px;
   border-radius: 50%;
+  margin: -3px;
 }
 
 /* ------ 1er contenu HEBERGEMENTS------*/
@@ -248,12 +286,6 @@ h3 {
   border: solid;
   width: 100%;
   margin: 10px;
-  /*
-  A refaire pour que l'image soit à gauche 
-  + supprimer la class commune...
-  display flex
-  flex-direction : row;
-  */
 }
 
 .containerSectionsubPopulaires img {
