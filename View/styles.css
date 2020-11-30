@@ -19,7 +19,7 @@ body {
 }
 
 #navbarContainer img {
-  padding-top: 25px;
+  padding-top: 34px;
 }
 
 .navbarHoverContainer {
@@ -28,11 +28,10 @@ body {
   width: auto;
   height: 45px;
   background-color: #0065fc; /* ici il suffit lors d'un hover de switch entre 95% et 100% pour faire apparaitre la barre bleu au dessus */
-
-  justify-content: center;
 }
+
 .navbarHoverContainer:nth-child(2) {
-  margin-left: auto;
+  margin-left: auto; /*permet d'avoir la navbar à droite, à partir du 2nd élements - image etant le premier*/
 }
 
 .navContainerItems {
@@ -41,7 +40,7 @@ body {
   color: black;
   background-color: white;
   height: 100%; /* ici il suffit lors d'un hover de switch entre 95% et 100% pour faire apparaitre la barre bleu au dessus */
-  padding: 35px 15px 0 15px;
+  padding: 35px 15px 0 15px; /*la marge interieur me permet ici de descendre le plus que possible le text.*/
   margin-top: auto;
 }
 
@@ -95,8 +94,6 @@ p {
 }
 
 .button {
-  /*J'ai ess*/
-
   padding: 8px; /*Me permet d'éloigner le texte des bords*/
   background: #0065fc;
   color: white;
@@ -120,6 +117,11 @@ p {
 
 /* ------ Boutons FILTRE ------*/
 /* ------ Boutons FILTRE ------*/
+
+.Filtre {
+  display: flex;
+  flex-direction: row;
+}
 
 .contenantBouton {
   /* Va nous permettre de mieux */
@@ -147,37 +149,9 @@ p {
   margin-bottom: auto;
 }
 
-.Filtre {
-  display: flex;
-  flex-direction: row;
-}
-
 .Filtre h3 {
   margin-top: auto;
   margin-bottom: auto;
-}
-
-/*NE SERT A RIEN*/
-.buttonFiltre {
-  height: 40px;
-  background-color: white;
-
-  border: none; /* Remove borders */
-  color: black;
-  padding-top: 7px; /* me permet de manière approximative de centrer le texte*/
-  font-size: 16px; /* Set a font size */
-  border-radius: 40px;
-  border: solid;
-  border-color: lightgrey;
-}
-
-/*NE SERT A RIEN*/
-.iconeFiltre {
-  display: inline-block;
-  background-color: #deebff;
-  color: #0065fc;
-  width: 40px;
-  border-radius: 50%;
 }
 
 .divIconFilter {
@@ -191,6 +165,14 @@ p {
   margin: -3px;
 }
 
+.iconeFiltre {
+  display: inline-block;
+  background-color: #deebff;
+  color: #0065fc;
+  width: 40px;
+  border-radius: 50%;
+}
+
 /* ------ 1er contenu HEBERGEMENTS------*/
 /* ------ 1er contenu HEBERGEMENTS------*/
 
@@ -202,9 +184,9 @@ h3 {
 .subMainContainer {
   display: flex;
   flex-wrap: wrap;
-  width: 70%; /*Pour que cette section ne prenne  que 2/3 de la largeur de l'écran*/
+  width: 70%; /*Pour que cette section ne prenne  que 2/3 de la largeur de la flexbox*/
 
-  margin: 15px; /* ATTENTON je dois en mettre plus très probablement*/
+  margin: 15px 15px 15px 0; /* 0px pour la marge de gauche, car le body a déja une marge de 3vw pour le séparer du bord de l'écran.*/
   background-color: #f2f2f2;
   border-radius: 20px;
 }
@@ -231,8 +213,12 @@ h3 {
   border-radius: 20px;
 
   border: solid;
-  width: 30%;
-  margin: 10px;
+}
+
+.taillePremierSection {
+  width: 28%;
+  margin: 2.6%;
+  /*Mauvais, il faut que le contenant superieur ai un padding et cette classe doit avoir une marge un peu plus faible, mais proportionnel au padding du contenant superieur*/
 }
 
 .containerSection img {
@@ -252,15 +238,15 @@ h3 {
 #mainContainer {
   /* Le container qui contient les deux contenu est en flex*/
   display: flex;
-  width: 90vw;
+  width: 94vw;
 }
 
 .subMainContainerPopulaires {
   display: flex; /*permet d'avoir le contenu en dessous l'un de l'autre*/
   flex-direction: column;
-  width: 20%; /*le 1er contenu (hébergement Marseilles) prend 70% de l'espace, celui-ci 20%*/
+  width: 30%; /*le 1er contenu (hébergement Marseilles) prend 70% de l'espace, celui-ci 30%*/
 
-  margin: 15px; /* à faire concorder avec le 1er contenu!*/
+  margin: 15px 0 15px 15px; /* Juste pas de marge à droite*/
   background-color: #f2f2f2;
   border-radius: 20px;
 }
@@ -274,17 +260,14 @@ h3 {
 
 /* Ci-dessous le CSS pour les articles à l'inerieur des sections*/
 .containerSectionsubPopulaires {
-  width: 100%;
   height: 33%;
 
   display: flex;
-  flex-direction: row; /*A SUPPROMER : est fait en standard, donc peut être supprimé*/
 
   background-color: lightsalmon; /*a synchorniser avec les 1,2,3 contenus : classes communes*/
   border-radius: 20px; /*a synchorniser avec les 1,2,3 contenus : classes communes*/
 
   border: solid;
-  width: 100%;
   margin: 10px;
 }
 
@@ -293,9 +276,38 @@ h3 {
 
   width: 40%;
   height: 100%;
+
+  border-top-left-radius: 20px;
+  border-bottom-left-radius: 20px;
+
+  padding: 4px 10px 4px 4px; /*un peu plus de padding à droite pour écarter l'image du texte et un peu ailleur, pour l'écarter des bords.*/
 }
+
 .sousSousSection {
-  background-color: lightseagreen;
+  border-top-right-radius: 20px;
+  border-bottom-right-radius: 20px;
+
+  padding-right: 10%;
+}
+
+/* ------ 3ème CONTENU ------ */
+/* ------ 3ème CONTENU ------ */
+
+.Activites {
+  width: 94vw;
+}
+
+.groupArticles {
+  display: flex;
+  flex-direction: column;
+}
+
+.insideGroupArticles {
+  width: 100%;
+}
+
+.tailleTroisiemeSection {
+  width: 20%;
 }
 
 /* ------ FOOTER ------ */
