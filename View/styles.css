@@ -221,6 +221,7 @@ h3 {
 .taillePremierSection {
   width: 28%; /*23vw à mettre ici*/
   margin: 2.5%; /* à exprimer en vw*/
+  height: 200px;
   /*Mauvais, il faut que le contenant superieur ai un padding et cette classe doit avoir une marge un peu plus faible, mais proportionnel au padding du contenant superieur*/
 }
 
