@@ -302,7 +302,6 @@ h3 {
 
 .Activites {
   width: 94vw;
-  height: 600px;
   padding: 0px;
   justify-content: space-between;
 }
@@ -312,8 +311,9 @@ h3 {
   display: inline-block;
   background-color: lightseagreen;
   width: 100%;
+  height: 30px;
   padding: 0px;
-  margin: 0px;
+  margin: 0 0 0 0;
 }
 
 .groupArticles {
@@ -332,11 +332,14 @@ h3 {
 
 .tailleTroisiemeSection {
   width: 22vw;
+  height: 400px;
   margin: 0px;
 }
 
 .tailleImageActivites {
-  height: 80%;
+  height: 90%;
+  max-width: 100%;
+  max-height: 80%;
 }
 
 .imageActivites + h3 {
