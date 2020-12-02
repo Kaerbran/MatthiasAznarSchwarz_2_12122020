@@ -205,14 +205,22 @@ h3 {
   padding-left: 1vw;
 }
 
+.subMainContainer h3 {
+  padding-left: 1vw;
+  margin: 0;
+}
+
 .subMainContainer p {
   display: inline-block;
   width: 100%;
   padding-left: 1vw;
+  margin: 0;
 }
 
-.subMainContainer h3 {
-  padding-left: 10px;
+.starsContainer {
+  display: inline-block;
+  padding-left: 1vw;
+  margin-top: auto;
 }
 
 .containerSection {
