@@ -201,14 +201,12 @@ h3 {
 .subMainContainer h2 {
   /*permet d'avoir le h2 qui prend toute une ligne*/
   display: inline-block;
-  background-color: lightskyblue;
   width: 100%;
   padding-left: 1vw;
 }
 
 .subMainContainer p {
   display: inline-block;
-  background-color: lightskyblue;
   width: 100%;
   padding-left: 1vw;
 }
@@ -218,10 +216,9 @@ h3 {
 }
 
 .containerSection {
-  background-color: lightsalmon;
+  background-color: white;
   border-radius: 20px;
-
-  border: solid;
+  box-shadow: 1px 1px 1px 1px rgb(245, 242, 242);
 }
 
 .taillePremierSection {
@@ -268,7 +265,6 @@ h3 {
 .subMainContainerPopulaires h2 {
   /*display est nécessaire pour que le titre du premier contenu s'aligne avec ce dernier*/
   display: inline-block;
-  background-color: lightskyblue;
   width: 100%;
   padding-left: 1vw;
 }
@@ -276,13 +272,11 @@ h3 {
 /* Ci-dessous le CSS pour les articles à l'inerieur des sections*/
 .containerSectionsubPopulaires {
   height: 33%;
-
   display: flex;
 
-  background-color: lightsalmon; /*a synchorniser avec les 1,2,3 contenus : classes communes*/
+  background-color: white; /*a synchorniser avec les 1,2,3 contenus : classes communes*/
   border-radius: 20px; /*a synchorniser avec les 1,2,3 contenus : classes communes*/
 
-  border: solid;
   margin: 10px;
 }
 
@@ -312,6 +306,7 @@ h3 {
   width: 94vw;
   padding: 0px;
   justify-content: space-between;
+  background-color: white;
 }
 
 .Activites h2 {
@@ -319,7 +314,7 @@ h3 {
   display: inline-block;
   width: 100%;
   padding: 0px;
-  margin: 0 0 25px 0;
+  margin: 0 0 10px 0;
 }
 
 .groupArticles {
