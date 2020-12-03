@@ -134,6 +134,10 @@ p {
   flex-direction: row;
 }
 
+.contenantBouton:hover {
+  cursor: pointer;
+}
+
 .contenantBouton {
   /* Va nous permettre de mieux */
   display: flex;
@@ -170,10 +174,9 @@ p {
   align-items: center;
   background-color: #deebff;
   color: #0065fc;
-  width: 40px;
   height: 40px;
   border-radius: 50%;
-  margin: -3px;
+  margin: -2px;
 }
 
 .iconeFiltre {
@@ -182,6 +185,34 @@ p {
   color: #0065fc;
   width: 40px;
   border-radius: 50%;
+}
+
+.containerIcone {
+  background-color: lightcoral;
+  display: flex;
+  margin: 20px 0 20px 0;
+}
+
+.containerIcone p {
+  margin-right: auto;
+  margin-top: auto;
+  margin-bottom: auto;
+}
+
+.iconeInfo {
+  display: flex;
+  background-color: #deebff;
+  color: #0065fc;
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+
+  margin-right: 7px;
+}
+
+.resizeSmall {
+  font-size: 10px;
+  margin: auto;
 }
 
 /* ------ 1er contenu HEBERGEMENTS------*/
@@ -258,6 +289,13 @@ h3 {
 
 .tailleImageHebergement {
   height: 60%;
+}
+
+.Plus {
+  font-weight: bolder;
+  font-size: 12px;
+  padding-top: 15px;
+  padding-bottom: 15px;
 }
 
 /* ------ 2ème contenu MEILLEURS------*/
