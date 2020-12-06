@@ -7,6 +7,7 @@
 
 body {
   margin: 0px; /*en automatique, safari va mettre un margin... */
+  margin-left: 3vw;
 }
 
 img {
@@ -25,38 +26,51 @@ img {
 
 #navbarContainer {
   display: flex;
-  margin-left: 3vw;
   margin-bottom: 30px;
+}
+
+#navbarContainer :nth-child(2) {
+  margin-left: auto; /*permet d'avoir la navbar à droite, à partir du 2nd élements - image etant le premier*/
 }
 
 #navbarContainer img {
   padding-top: 34px;
+  margin-right: 50%;
 }
 
 .navbarHoverContainer {
   display: flex;
+  flex-direction: column;
 
-  width: auto;
-  height: 45px;
-  background-color: #0065fc; /* ici il suffit lors d'un hover de switch entre 95% et 100% pour faire apparaitre la barre bleu au dessus */
+  background-color: lightcoral; /*white*/
 }
 
-.navbarHoverContainer:nth-child(2) {
-  margin-left: auto; /*permet d'avoir la navbar à droite, à partir du 2nd élements - image etant le premier*/
+.navbarHoverContainer :nth-child(1) {
+  order: 1; /*permet d'avoir la barre bleu en haut. Pour les petits ecran, il faut indiquer "2"*/
+  margin-top: auto; /*permet d'éloigner le texte!*/
+}
+
+.coloredHoverElement {
+  background-color: white;
+  width: 100%;
+  height: 3px;
 }
 
 .navContainerItems {
-  text-decoration: none;
-  text-emphasis: none;
+  text-decoration: none; /*retirer le sousligner du <a/>*/
+  text-emphasis: none; /*retirer le gras du <a/>*/
   color: black;
-  background-color: white;
-  height: 100%; /* ici il suffit lors d'un hover de switch entre 95% et 100% pour faire apparaitre la barre bleu au dessus */
-  padding: 35px 15px 0 15px; /*la marge interieur me permet ici de descendre le plus que possible le text.*/
-  margin-top: auto;
+  width: 100%;
+
+  padding: 0 1vw 0.5vw 1vw; /*la marge interieur me permet ici de descendre le plus que possible le text.*/
 }
 
+/*Lorsq'on hover sur le bouton, on a le petit div du dessus qui change de couleur*/
+/* ~ : c'est pour appliquer un paramètre sur même niveau DOM! */
+.navContainerItems:hover ~ .coloredHoverElement {
+  background-color: #0065fc;
+}
 .navContainerItems:hover {
-  height: 95%; /* ici il suffit lors d'un hover de switch entre 95% et 100% pour faire apparaitre la barre bleu au dessus */
   color: #0065fc;
 }
 
@@ -65,11 +79,33 @@ img {
   color: #0065fc;
 }
 
-/* -------- STYLES POUR LE BODY ------- */
-/* -------- STYLES POUR LE BODY ------- */
-#decalage {
-  margin-left: 3vw;
+/* MEDIA POUR  ------- NAVBAR ------ */
+/* MEDIA POUR  ------- NAVBAR ------ */
+/*On applique le css, si et seulement si, la largeur d'affichage est est inférieur à 991px*/
+@media (max-width: 768px) {
+  #navbarContainer {
+    flex-wrap: wrap;
+  }
+  #navbarContainer :nth-child(1) {
+    order: 1;
+  }
+  #navbarContainer :nth-child(2) {
+    order: 3;
+  }
+  #navbarContainer :nth-child(3) {
+    order: 4;
+  }
+  #navbarContainer :nth-child(4) {
+    order: 2;
+    margin-left: auto;
+  }
+  .tailleMoitie {
+    width: 50vw;
+  }
 }
+
+/* -------- STYLES POUR LE BODY ------- */
+/* -------- STYLES POUR LE BODY ------- */
 
 h2 {
   font-size: 20px;
@@ -425,6 +461,9 @@ h3 {
 
 footer {
   display: flex;
+
+  margin-left: -3vw;
+
   width: 100vw;
   background-color: #f2f2f2;
   padding-top: 25px;
