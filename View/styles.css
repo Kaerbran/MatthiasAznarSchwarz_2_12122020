@@ -516,6 +516,30 @@ h3 {
 /* MEDIA POUR  ------- LES TROIS CONTENUS ------ */
 /*On applique le css, si et seulement si, la largeur d'affichage est est inférieur à 991px*/
 @media (max-width: 768px) {
+  #mainContainer {
+    /* Le container qui contient les deux contenu est en flex*/
+    flex-direction: column-reverse;
+  }
+
+  .taillePremierSection {
+    width: 94vw;
+  }
+
+  .subMainContainer {
+    width: 94vw;
+    background-color: white;
+  }
+
+  .subMainContainerPopulaires {
+    width: 100vw;
+    margin-left: -3vw;
+    padding-left: 3vw;
+    padding-right: 3vw;
+    border-radius: 0px;
+  }
+  .containerSectionsubPopulaires img {
+    height: 25vh;
+  }
 }
 
 /* ------ FOOTER ------ */
