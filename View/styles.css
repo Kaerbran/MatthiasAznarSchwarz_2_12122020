@@ -49,7 +49,7 @@ img {
 
 #navbarContainer img {
   padding-top: 25px;
-  margin-right: 50%;
+  margin-right: 30%;
   margin-left: 3vw;
 }
 
@@ -575,7 +575,6 @@ footer {
   display: flex;
   flex-direction: column;
   margin-right: auto;
-  /* à voir s'il manque encore une marge sur le côté gauche du 1er element*/
 }
 
 .containerFooter a {
@@ -589,4 +588,10 @@ footer {
   font-weight: lighter;
 
   padding-top: 15px;
+}
+
+@media (max-width: 768px) {
+  footer {
+    flex-direction: column;
+  }
 }
