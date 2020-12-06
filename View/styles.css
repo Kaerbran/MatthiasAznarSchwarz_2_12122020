@@ -17,7 +17,6 @@ p {
 
 body {
   margin: 0px; /*en automatique, safari va mettre un margin... */
-  margin-left: 3vw;
 }
 
 img {
@@ -31,6 +30,11 @@ img {
 .gris {
   color: rgb(214, 214, 214);
 }
+
+.decalage {
+  margin-left: 3vw;
+}
+
 /* -------- STYLES POUR LA NAVBAR ------- */
 /* -------- STYLES POUR LA NAVBAR ------- */
 
@@ -46,6 +50,7 @@ img {
 #navbarContainer img {
   padding-top: 25px;
   margin-right: 50%;
+  margin-left: 3vw;
 }
 
 .navbarHoverContainer {
@@ -111,15 +116,15 @@ img {
     order: 2;
     margin-left: auto;
   }
+
   .tailleMoitie {
     width: 50vw;
   }
+
   body {
     margin-left: 0;
   }
-  #navbarContainer img {
-    margin-left: 3vw;
-  }
+
   .coloredHoverElement {
     background-color: rgb(216, 223, 230);
   }
@@ -127,19 +132,6 @@ img {
   .Inscrire + .coloredHoverElement {
     background-color: white;
   }
-}
-
-/* -------- STYLES POUR LE BODY ------- */
-/* -------- STYLES POUR LE BODY ------- */
-
-h2 {
-  font-size: 20px;
-  font-weight: bold;
-}
-
-p {
-  font-size: 10px;
-  font-weight: normal;
 }
 
 /* ------ Formulaire ------*/
@@ -153,16 +145,28 @@ p {
   margin-bottom: 25px;
 }
 
-.localisationIcone {
+.FormIcone {
   display: block;
   margin-top: auto; /*Me permet de bien centrer l'icone dans le container parent*/
   margin-bottom: auto; /*Me permet de bien centrer l'icone dans le container parent*/
   background-color: #f2f2f2;
   padding: 10px; /*Me permet d'éloigner l'icone des bords*/
-  width: 33px;
+  width: 38px;
   height: 36px;
+  text-align: center; /*permet de centrer sur l'axe horizontal*/
+}
+.leftIcone {
   border-top-left-radius: 10px;
   border-bottom-left-radius: 10px;
+}
+.rightIcone {
+  display: none;
+
+  border-radius: 10px;
+  margin-left: -5px;
+
+  color: white;
+  background-color: #0065fc;
 }
 
 .button {
@@ -185,6 +189,18 @@ p {
 
 .button:hover {
   background: #ccc;
+}
+
+/* MEDIA POUR  ------- Formulaire ------ */
+/* MEDIA POUR  ------- Formulaire ------ */
+/*On applique le css, si et seulement si, la largeur d'affichage est est inférieur à 991px*/
+@media (max-width: 768px) {
+  .rightIcone {
+    display: inline-block;
+  }
+  .button {
+    display: none;
+  }
 }
 
 /* ------ Boutons FILTRE ------*/
@@ -277,6 +293,12 @@ p {
 .resizeSmall {
   font-size: 10px;
   margin: auto;
+}
+
+/* MEDIA POUR  ------- FILTRE ------ */
+/* MEDIA POUR  ------- FILTRE ------ */
+/*On applique le css, si et seulement si, la largeur d'affichage est est inférieur à 991px*/
+@media (max-width: 768px) {
 }
 
 /* ------ 1er contenu HEBERGEMENTS------*/
