@@ -355,7 +355,9 @@ h3 {
 }
 
 .containerSection {
-  /*Je n'ai pas utilisé flex box ici... A cause de ça j'ai beaucoup de mal à bien placé tout en bas */
+  display: flex;
+  flex-direction: column;
+
   background-color: white;
   border-radius: 20px;
   box-shadow: 1px 1px 1px 1px rgb(245, 242, 242);
@@ -364,7 +366,7 @@ h3 {
 .taillePremierSection {
   width: 18vw;
   margin: 1vw; /* Chaque contenant a une marge de 1vw. Et le contenant du contenant a un padding de 1vw*/
-  height: 200px;
+  height: 180px;
 }
 
 .containerSection img {
@@ -453,14 +455,15 @@ h3 {
   padding: 0px;
   margin: 0px;
   padding-left: 1vw;
-  padding-top: 1vw;
   padding-bottom: 5px;
+  padding-top: 1vw;
 }
 
 .sousSousSection p {
   padding: 0px;
   margin: 0px;
   padding-left: 1vw;
+  padding-bottom: 4px;
 }
 
 /* ------ 3ème CONTENU ------ */
@@ -507,6 +510,12 @@ h3 {
 
 .paddingTop {
   padding-top: 10px;
+}
+
+/* MEDIA POUR  ------- LES TROIS CONTENUS ------ */
+/* MEDIA POUR  ------- LES TROIS CONTENUS ------ */
+/*On applique le css, si et seulement si, la largeur d'affichage est est inférieur à 991px*/
+@media (max-width: 768px) {
 }
 
 /* ------ FOOTER ------ */
