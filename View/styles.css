@@ -178,15 +178,23 @@ img {
   background: #0065fc;
   color: white;
   font-size: 17px;
+  font-weight: 600;
   border: none;
   border-top-right-radius: 10px;
   border-bottom-right-radius: 10px;
   margin-left: -1px; /* permet de coller le bouton au formulaire*/
 }
+::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+  color: black;
+  opacity: 1; /* Firefox */
+}
 
 .inputField {
   padding: 6px;
+
   font-size: 17px;
+  font-weight: 600;
+
   border: 1px solid #f2f2f2;
   width: 200px; /* adjust as needed (as long as it doesn't break the topnav) */
 }
@@ -240,7 +248,7 @@ img {
 
 .contenantBouton span {
   display: block;
-  
+
   padding-left: 10px;
   padding-right: 10px;
   margin-top: auto;
