@@ -226,6 +226,11 @@ img {
 
 .contenantBouton:hover {
   cursor: pointer;
+  color: #0065fc;
+}
+
+.hoverPointer:hover {
+  cursor: pointer;
 }
 
 .contenantBouton {
@@ -467,6 +472,7 @@ h3 {
   border-bottom-right-radius: 20px;
 
   padding-right: 2vw;
+  padding-bottom: 3px;
 
   display: flex;
   flex-direction: column;
@@ -476,7 +482,7 @@ h3 {
   padding: 0px;
   margin: 0px;
   padding-left: 1vw;
-  padding-bottom: 5px;
+  padding-bottom: 15px;
   padding-top: 1vw;
 }
 
